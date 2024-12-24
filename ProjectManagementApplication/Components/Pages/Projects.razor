@@ -1,11 +1,21 @@
 ﻿@page "/projects"
-<h3>Project Board</h3>
+
+<PageTitle>Projects</PageTitle>
 
 <ul>
-    @foreach (var project in projects)
-    {
-        <li>@project.name</li>
-    }
+    <div class="title">Project Board</div>
+    <div class="container">
+        @foreach (var project in projects)
+        {
+            <div class="projectPanelGood">
+                <span class="projectName">@project.name</span>
+                <span class="ownerImage"><img src="Images/DefaultUser.png" alt="logo"></span>
+                <span class="progressTag"><img src="Images/Tag_Done.png" alt="logo"></span>
+                <span class="dueDate"><img src="Images/Calendar_Good.png" alt="logo"></span>
+                <span class="addProgressButton"><img src="Images/Add_Progress_Button.png" alt="logo"></span>
+            </div>
+        }
+   </div>
 </ul>
 
 @code {
