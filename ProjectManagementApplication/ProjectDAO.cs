@@ -10,6 +10,7 @@
             projects = new List<Project>();
 
             projects.Add(new Project("project1", 3));
+            projects.Add(new Project("project2", 3));
         }
 
         public static List<Project> getProjects()
