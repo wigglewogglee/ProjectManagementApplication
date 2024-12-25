@@ -7,13 +7,116 @@
     <div class="container">
         @foreach (var project in projects)
         {
-            <div class="projectPanelGood">
-                <span class="projectName">@project.name</span>
-                <span class="ownerImage"><img src="Images/DefaultUser.png" alt="logo"></span>
-                <span class="progressTag"><img src="Images/Tag_Done.png" alt="logo"></span>
-                <span class="dueDate"><img src="Images/Calendar_Good.png" alt="logo"></span>
-                <span class="addProgressButton"><img src="Images/Add_Progress_Button.png" alt="logo"></span>
+            @if (project.getProjectStatus().Equals("DONE")) {
+                <div class="projectPanelGood">
+                <div>
+                    <span class="projectName">@project.name</span>
+                </div>
+
+                <div class="unaffect">
+                    <span class="ownerImage"><img src="Images/DefaultUser.png" alt="logo"></span>
+
+                    @if (project.getProjectStatus().Equals("DONE")) {
+                        <span class="progressTag"><img src="Images/Tag_Done.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("INPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_In_Progress.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("MINORPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_Minor_Progress.png" alt="logo"></span>
+                    }
+
+                    @if (project.dueDate < DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Urgent.png" alt="logo"></span>
+                    } else if (project.dueDate > DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Good.png" alt="logo"></span>
+                    }
+
+                    
+                    <span class="projectDate">@project.getDueDate()</span>
+                    <a href="home">
+                        <span class="addProgressButton"><img src="Images/Add_Progress_Button.png" alt="logo"></span>
+                    </a>
+                </div>
+                <div class="progress">
+                    <div class="progressFill"></div>
+                    <span class="progressBar"></span>
+                </div>
             </div>
+            } else if (project.getProjectStatus().Equals("INPROGRESS")) {
+                <div class="projectPanelWarning">
+                <div>
+                    <span class="projectName">@project.name</span>
+                </div>
+
+                <div class="unaffect">
+                    <span class="ownerImage"><img src="Images/DefaultUser.png" alt="logo"></span>
+
+                    @if (project.getProjectStatus().Equals("DONE")) {
+                        <span class="progressTag"><img src="Images/Tag_Done.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("INPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_In_Progress.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("MINORPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_Minor_Progress.png" alt="logo"></span>
+                    }
+
+                    @if (project.dueDate < DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Urgent.png" alt="logo"></span>
+                    } else if (project.dueDate > DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Good.png" alt="logo"></span>
+                    }
+
+                    
+                    <span class="projectDate">@project.getDueDate()</span>
+                    <a href="home">
+                        <span class="addProgressButton"><img src="Images/Add_Progress_Button.png" alt="logo"></span>
+                    </a>
+                </div>
+                <div class="progress">
+                    <div class="progressFill"></div>
+                    <span class="progressBar"></span>
+                </div>
+            </div>
+            } else if (project.getProjectStatus().Equals("MINORPROGRESS")) {
+                <div class="projectPanelUrgent">
+                <div>
+                    <span class="projectName">@project.name</span>
+                </div>
+
+                <div class="unaffect">
+                    <span class="ownerImage"><img src="Images/DefaultUser.png" alt="logo"></span>
+
+                    @if (project.getProjectStatus().Equals("DONE")) {
+                        <span class="progressTag"><img src="Images/Tag_Done.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("INPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_In_Progress.png" alt="logo"></span>
+                    } else if (project.getProjectStatus().Equals("MINORPROGRESS")) {
+                        <span class="progressTag"><img src="Images/Tag_Minor_Progress.png" alt="logo"></span>
+                    }
+
+                    @if (project.dueDate < DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Urgent.png" alt="logo"></span>
+                    } else if (project.dueDate > DateTime.Now) {
+
+                        <span class="dueDate"><img src="Images/Calendar_Good.png" alt="logo"></span>
+                    }
+
+                    
+                    <span class="projectDate">@project.getDueDate()</span>
+                    <a href="home">
+                        <span class="addProgressButton"><img src="Images/Add_Progress_Button.png" alt="logo"></span>
+                    </a>
+                </div>
+                <div class="progress">
+                    <div class="progressFill"></div>
+                    <span class="progressBar"></span>
+                </div>
+            </div>
+            }
+            
         }
    </div>
 </ul>

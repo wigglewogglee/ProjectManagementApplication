@@ -9,11 +9,13 @@
             //server call
             projects = new List<Project>();
 
-            projects.Add(new Project("project1", 3));
-            projects.Add(new Project("project2", 3));
-            projects.Add(new Project("project3", 3));
-            projects.Add(new Project("project4", 3));
-            projects.Add(new Project("project5", 3));
+            //datetime as year/month/day
+
+            projects.Add(new Project("PROJECT NAME", 3, new DateTime(2023, 02, 01), "DONE"));
+            projects.Add(new Project("PROJECT NAME", 3, new DateTime(2025, 06, 23), "INPROGRESS"));
+            projects.Add(new Project("PROJECT NAME", 3, new DateTime(2023, 02, 01), "DONE"));
+            projects.Add(new Project("PROJECT NAME", 3, new DateTime(2023, 02, 01), "MINORPROGRESS"));
+            projects.Add(new Project("PROJECT NAME", 3, new DateTime(2023, 02, 01), "DONE"));
         }
 
         public static List<Project> getProjects()

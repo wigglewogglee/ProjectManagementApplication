@@ -2,31 +2,64 @@
     font-family: 'Poppins-Bold';
     left: 40px;
     font-size: 30px;
+    padding-bottom: 30px;
 }
 
 .projectPanelGood {
     height: 160px;
-    width: 800px;
+    width: 720px;
     background-image: url("Images/Good_Panel.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
+.projectPanelWarning {
+    height: 160px;
+    width: 720px;
+    background-image: url("Images/Warning_Panel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.projectPanelUrgent {
+    height: 160px;
+    width: 720px;
+    background-image: url("Images/Urgent_Panel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.unaffect {
+    position:absolute;
+    margin-left: 80px;
+}
+
 .projectName {
     font-family: 'Poppins-Bold';
     font-size: 20px;
     top: -25px;
-    left: 85px;
+    left: 75px;
     position: relative;
     z-index: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .ownerImage img {
-    height: 50px;
+    position: absolute;
+    height: 40px;
     width: auto;
     top: -20px;
     left: -60px;
@@ -38,30 +71,42 @@
 .progressTag img {
     height: 30px;
     width: auto;
-    top: 30px;
-    left: -110px;
+    top: 25px;
+    left: -100px;
     position: relative;
     overflow-x: hidden;
+}
+
+.addProgressButton {
+    position: absolute;
+    top: 10px;
+    left: 590px;
 }
 
 .addProgressButton img {
     height: 30px;
     width: auto;
-    top: 5px;
-    left: 300px;
     position: relative;
     overflow-x: hidden;
     transition: 0.4s;
-
 }
 
 .dueDate img {
     height: 20px;
     width: auto;
     top: -70px;
-    left: -285px;
+    left: -272px;
     position: relative;
     overflow-x: hidden;
+}
+
+.projectDate {
+    font-family: 'Poppins';
+    font-size: 14px;
+    top: -70px;
+    left: -265px;
+    position: relative;
+    z-index: 1;
 }
 
 .addProgressButton img:hover {
@@ -73,4 +118,20 @@
     left: 400px;
     margin: 0;
     padding: 0;
+}
+
+.progress {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 410px;
+    height: 20px;
+    background: #a6a6a6;
+    border-radius: 7px;
+}
+
+.progressFill {
+    width: 70%;
+    height: 100%;
+    background: #7086ff;
 }

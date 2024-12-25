@@ -1,0 +1,41 @@
+﻿.bwLogo img {
+    position: absolute;
+    height: 300px;
+    width: auto;
+    margin-left: 540px;
+    transition: 0.8s;
+    align-self: center;
+}
+.errorMessage {
+    position: absolute;
+    font-family: 'Poppins-Bold';
+    font-size: 24px;
+    top: 250px;
+    left: 550px;
+    position: relative;
+    z-index: 1;
+}
+
+.homeButton {
+    font-family: 'Poppins-Bold';
+    color: white;
+    font-size: 16px;
+}
+
+.homeButton button {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    background-color: #7086ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 610px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.homeButton button:hover {
+    opacity: 70%;
+}
