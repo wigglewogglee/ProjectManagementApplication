@@ -47,9 +47,22 @@
     display: inline-block;
     margin: 0px;
     padding: 0px;
-    margin-left: 950px;
     border-radius: 50%;
     overflow-x: hidden;
+    left: 0%;
+    transform: translate(1900%, 0);
+}
+
+.navdiv {
+}
+
+.profile {
+}
+
+.profile img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
 }
 
 li {
