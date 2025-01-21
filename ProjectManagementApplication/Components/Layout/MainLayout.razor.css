@@ -16,6 +16,75 @@
     justify-content: space-between;
 }
 
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.dropdown li {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.dropdown li:before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    transition: 0.3s;
+
+}
+
+.dropdown li:hover::before {
+    width: 65%;
+}
+
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    padding: 1rem 1rem;
+    margin: 3rem -2.5rem;
+    background: #8f79b9;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 14px;
+    font-family: "Poppins";
+    display: inline-block;
+    opacity: 0;
+    transition: 0.2s all ease;
+    top: 30px;
+}
+
+.actions {
+}
+
+.userDiv {
+    height: 20px;
+    width: auto;
+}
+
+.userDiv img {
+    height: 0px;
+    width: auto;
+    padding: 0;
+}
+
+.user:hover .dropdown {
+    opacity: 100;
+    top: 25px;
+    display: block;
+}
+
+.user {
+}
+
 .navdiv a::before {
     content: '';
     position: absolute;
@@ -41,6 +110,11 @@
     overflow-x: hidden;
 }
 
+.test {
+    font-family: Arial;
+    color: black;
+}
+
 .navdiv c img {
     height: 50px;
     width: auto;
@@ -53,14 +127,29 @@
     transform: translate(1900%, 0);
 }
 
+.navdiv ul img {
+    margin-top: -15%;
+}
+
 .navdiv {
+    font-size: 18px;
+    margin-right: 25px;
+    font-family: "Poppins-Bold";
+    
+}
+
+.navdiv ul {
+    list-style: none;
+    margin: 0 2px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .profile {
 }
 
 .profile img {
-    height: 50px;
+    height: 45px;
     width: auto;
     border-radius: 50%;
 }
@@ -72,7 +161,17 @@ li {
 }
 li a {
     color: white; 
-    font-size: 18px; 
-    font-weight: bold;
+
+}
+
+.bolded {
+    font-size: 18px;
     margin-right: 25px;
+    font-family: "Poppins-Bold";
+}
+
+.test {
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-right: 5px;
 }

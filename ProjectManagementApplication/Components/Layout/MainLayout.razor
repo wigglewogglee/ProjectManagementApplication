@@ -9,17 +9,33 @@
             <div class="navdiv">
                 
                 <ul>
-                    <li><b href=""><img src="Images/ProjectManagementLogo.png" alt="logo"></b></li>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="projects">Projects</a></li>
-                    <li><a href="home">Calendar</a></li>
-                    <li><a href="home">Team</a></li>
+                    <li class="bolded"><b href=""><img src="Images/ProjectManagementLogo.png" alt="logo" @onclick=onImageClick></b></li>
+                    <li class="bolded"><a href="home">Home</a></li>
+                    <li class="bolded"><a href="projects">Projects</a></li>
+                    <li class="bolded"><a href="home">Calendar</a></li>
+                    <li class="bolded"><a href="home">Team</a></li>
                 </ul>
             </div>
-
             <div class="profile">
-                <img src="Images/DefaultUser.png" alt="logo">
+                <ul class="actions">                    
+                    <li class="create">
+                        <img src="Images/Create_Icon.png" alt="logo">
+                    </li>
+                    <li class="notifications">
+                        <img src="Images/Notification_Default.png" alt="logo" id="btnControl">
+                    </li>
+                    <li class="user">
 
+                        <ul class="dropdown">
+                            <li class="test"><a href="login">Account</a></li>
+                            <li class="test"><a href="login">Settings</a></li>
+                            <li class="test"><a href="login">Help</a></li>
+                            <li class="test"><a href="login">Log Out</a></li>
+                        </ul>
+
+                        <img src="Images/DefaultUser.png" alt="logo">
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -28,6 +44,14 @@
         </article>
     </main>
 </div>
+
+@code {
+    private void onImageClick()
+    {
+        Console.WriteLine("Image clicked!");
+        // You can also perform other actions here.
+    }
+}
 
 <!--
     <div id="blazor-error-ui">

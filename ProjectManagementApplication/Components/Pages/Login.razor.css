@@ -187,3 +187,23 @@ input[type='checkbox'] {
     text-decoration: underline;
     margin-left: 105px;
 }
+
+.header {
+    width: 400px;
+    top: 500%;
+    left: 148%;
+    transform: translate(148%, -500%);
+}
+
+.header label {
+    color: white;
+    font-family: "Poppins";
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+}
