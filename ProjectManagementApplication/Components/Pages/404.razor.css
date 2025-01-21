@@ -6,6 +6,7 @@
     transition: 0.8s;
     align-self: center;
 }
+
 .errorMessage {
     position: absolute;
     font-family: 'Poppins-Bold';

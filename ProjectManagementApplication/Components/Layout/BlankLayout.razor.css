@@ -1,0 +1,13 @@
+
+.navbar {
+    background-color: #45355b;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 15px;
+    padding-top: 20px;
+    height: 40vh
+}
+
+.navbar {
+    z-index: -1;
+}
+

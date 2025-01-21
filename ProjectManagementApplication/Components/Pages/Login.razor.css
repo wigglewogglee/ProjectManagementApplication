@@ -1,0 +1,187 @@
+﻿
+
+.loginBackground {
+    font-family: 'Poppins-Bold';
+    margin-left: 500px;
+    font-size: 30px;
+    margin-top: -150px;
+    width: 400px;
+    height: 470px;
+    background-color: white;
+    box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.13);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.loginHeader {
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 400px;
+    background-color: #45355b;
+}
+
+.wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+.wrapper .input-data {
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper .input-data input {
+    outline: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+    transform: translateY(-25px);
+}
+
+.passwordWrapper {
+    margin-top: -20px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+.passwordWrapper .input-data {
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.passwordWrapper .input-data input {
+    outline: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.passwordWrapper .input-data label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.loginBackground h3 {
+    font-family: "Poppins-Bold" font-size: 25px;
+    margin-left: 160px;
+    padding-top: 30px;
+}
+
+.loginBackground h2 {
+    font-size: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#nonPad {
+    padding-top: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 30px;
+}
+
+body {
+    background-color: #f8f5f5;
+}
+
+.forgotWrapper {
+    margin-top: -34px;
+}
+
+.forgotWrapper label {
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    text-decoration: underline;
+    color: #8c8c8c;
+    margin-left: 30px;
+}
+
+.rememberMeWrapper {
+    margin-top: 20px;
+}
+
+.rememberMeWrapper label {
+    font-size: 16px;
+    font-family: "Poppins";
+    color: #8c8c8c;
+    margin-left: 155px;
+    margin-top: -79px;
+    position: absolute;
+}
+
+input[type='checkbox'] {
+    box-shadow: none;
+    border-color: silver;
+    margin-top: 15px;
+    accent-color: #5e477e;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-left: 127px;
+}
+
+.loginWrapper {
+    margin-top: -25px;
+}
+
+.loginButton {
+    color: white;
+    font-size: 16px;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 50px;
+    background-color: #5e477e;
+    transition: 0.25s all ease;
+}
+
+.loginButton:hover {
+
+    background-color: #8d6cb9;
+}
+
+.signupWrapper label {
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    color: #8c8c8c;
+    text-decoration: underline;
+    margin-left: 105px;
+}

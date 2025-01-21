@@ -5,6 +5,24 @@
     padding-bottom: 30px;
 }
 
+.statusTitle {
+    position: absolute;
+    font-family: 'Poppins-Bold';
+    margin-left: 800px;
+    margin-top: -875px;
+    font-size: 30px;
+}
+
+.statusBackground {
+    position: absolute;
+    height: 360px;
+    width: 920px;
+    background-image: url("Images/Project_Status.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .projectPanelGood {
     height: 160px;
     width: 720px;

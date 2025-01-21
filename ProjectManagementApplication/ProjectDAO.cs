@@ -3,11 +3,11 @@
     public class ProjectDAO
     {
 
-        private static List<Project> projects = new();
+        private static List<Project> projects = new List<Project>();
         public static void retrieveFromServer()
         {
             //server call
-            projects = new List<Project>();
+            projects.Clear();
 
             //datetime as year/month/day
 

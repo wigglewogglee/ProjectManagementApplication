@@ -33,5 +33,26 @@ namespace ProjectManagementApplication
         {
             return this.projectStatus;
         }
+
+        public int getProjectPercentage()
+        {
+            return (int)(this.checkpoints);
+        }
+
+        public String getProjectDisplayName()
+        {
+
+            String cutoffName = this.name;
+
+            int maxLength = 20;
+
+            if (cutoffName.Length > maxLength)
+            {
+                cutoffName = cutoffName.Substring(0, maxLength - 3);
+                cutoffName = cutoffName + "...";
+            }
+
+            return cutoffName;
+        }
     }
 }
