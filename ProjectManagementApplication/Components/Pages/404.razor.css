@@ -27,16 +27,16 @@
     border: 0;
     background: none;
     box-shadow: none;
-    background-color: #7086ff;
+    background-color: #5e477e;
+    transition: 0.25s all ease;
     padding: 10px 20px;
     border-radius: 10px;
     color: white;
     margin-top: 270px;
     margin-left: 610px;
-    transition: 0.4s;
     z-index: 1;
 }
 
 .homeButton button:hover {
-    opacity: 70%;
+    background-color: #8d6cb9;
 }

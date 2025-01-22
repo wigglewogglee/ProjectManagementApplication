@@ -1,4 +1,7 @@
+using ProjectManagementApplication;
 using ProjectManagementApplication.Components;
+using Microsoft.AspNetCore.Components.Web;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,5 +28,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.UseStatusCodePagesWithRedirects("/404");
+
+AccountDAO.retrieveFromServer();
 
 app.Run();

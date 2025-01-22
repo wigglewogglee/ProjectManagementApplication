@@ -1,0 +1,35 @@
+﻿@page "/signupquestions"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+@layout Layout.BlankLayout
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+
+<ul>
+    <div class="header">
+        <img src="Images/ProjectManagementLogo.png" alt="logo">
+        <label>ProjectPilot</label>
+    </div>
+
+    <div class="signupBackground">
+        <h3>Let's finish setting up your account.</h3>
+        <div class="wrapper">
+            <div class="input-data">
+                <input type="text" @bind="fullName" class="fullNameField" required>
+                <label>Full Name</label>
+            </div>
+        </div>
+
+    </div>
+</ul>
+
+@code {
+
+    private bool loginError = false;
+    private string invalidMessage { get; set; } = "";
+    private string username { get; set; } = "";
+    private string fullName { get; set; } = "";
+    private string email { get; set; } = "";
+    private string password { get; set; } = "";
+    private bool rememberUser { get; set; } = false;
+}

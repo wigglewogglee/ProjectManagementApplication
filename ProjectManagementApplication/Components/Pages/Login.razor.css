@@ -132,6 +132,7 @@ body {
     text-decoration: underline;
     color: #8c8c8c;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .rememberMeWrapper {
@@ -185,14 +186,15 @@ input[type='checkbox'] {
     font-family: "Poppins-Bold";
     color: #8c8c8c;
     text-decoration: underline;
+    cursor: pointer;
     margin-left: 105px;
 }
 
 .header {
     width: 400px;
-    top: 500%;
-    left: 148%;
-    transform: translate(148%, -500%);
+    position: absolute; 
+    left: 50%; 
+    transform: translate(-30%, -500%); 
 }
 
 .header label {
@@ -206,4 +208,42 @@ input[type='checkbox'] {
 .header img {
     height: 50px;
     width: auto;
+}
+
+.loginErrorBackground {
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    width: 400px;
+    height: 140px;
+    background-color: #FFCCCB;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.loginErrorBackground h3 {
+    color: #6e0701;
+    font-family: "Poppins-Bold";
+    font-size: 25px;
+    margin-left: 30px;
+    padding-top: 30px;
+}
+
+.subheading {
+    color: #6e0701;
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-left: 30px;
+    position: absolute;
+}
+
+.errorMessage {
+    color: #6e0701;
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-left: 30px;
+    padding-top: 30px;
 }

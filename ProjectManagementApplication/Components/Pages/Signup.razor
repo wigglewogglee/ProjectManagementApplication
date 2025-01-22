@@ -1,0 +1,70 @@
+﻿@page "/signup"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+@layout Layout.BlankLayout
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+
+<ul>
+    <div class="header">
+        <img src="Images/ProjectManagementLogo.png" alt="logo">
+        <label>ProjectPilot</label>
+    </div>
+
+    <div class="signupBackground">
+        <h3>Sign Up</h3>
+        <div class="wrapper">
+            <div class="input-data">
+                <input type="text" @bind="username" class="usernameField" required>
+                <label>Username</label>
+            </div>
+        </div>
+        <div class="emailWrapper">
+            <div class="input-data">
+                <input type="text" @bind="email" class="emailField" required>
+                <label>Email</label>
+            </div>
+        </div>
+        <div class="passwordWrapper">
+            <div class="input-data">
+                <input type="text" @bind="password" class="passwordField" required>
+                <label>Password</label>
+            </div>
+        </div>
+        <div class="termsConditionsWrapper">
+            <input type="checkbox" class="checkBox" required><br><br>
+            <label>I agree to the Terms of Service.</label>
+        </div>
+        <div class="signupWrapper">
+            <button class="signupButton">Sign Up</button>
+        </div>
+        <div class="loginWrapper">
+            <label @onclick="redirectToLogin">Already have an account? Log In</label>
+        </div>
+    </div>
+</ul>
+
+@code {
+
+    private bool loginError = false;
+    private string invalidMessage { get; set; } = "";
+    private string username { get; set; } = "";
+    private string fullName { get; set; } = "";
+    private string email { get; set; } = "";
+    private string password { get; set; } = "";
+    private bool rememberUser { get; set; } = false;
+
+    //load in title after page is rendered
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", "document.title = 'ProjectPilot - Sign Up';");
+        }
+    }
+
+    private void redirectToLogin()
+    {
+        NavManager.NavigateTo("/login");
+    }
+}

@@ -1,52 +1,111 @@
 ﻿@page "/login"
-@layout Layout.BlankLayout
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
-<PageTitle>Login</PageTitle>
+@layout Layout.BlankLayout
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
 
 <ul>
-
     <div class="header">
         <img src="Images/ProjectManagementLogo.png" alt="logo">
         <label>ProjectPilot</label>
     </div>
 
     <div class="loginBackground">
-
         <h3>Log In</h3>
-
         <div class="wrapper">
             <div class="input-data">
-                <input type="text" class="usernameField" required><br><br>
+                <input type="text" @bind="username" class="usernameField" required>
                 <label>Username or Email</label>
             </div>
         </div>
         <div class="passwordWrapper">
             <div class="input-data">
-                <input type="text" class="passwordField" required><br><br>
+                <input type="password" @bind="password" class="passwordField" required>
                 <label>Password</label>
             </div>
         </div>
         <div class="forgotWrapper">
-            <label>Forgot your password?</label>
+            <label @onclick="redirectToPasswordReset">Forgot your password?</label>
         </div>
         <div class="rememberMeWrapper">
             <input type="checkbox" class="checkBox" required><br><br>
             <label>Remember me</label>
         </div>
         <div class="loginWrapper">
-            <button class="loginButton">Log In</button>
+            <button class="loginButton" @onclick="checkFields">Log In</button>
         </div>
         <div class="signupWrapper">
-            <label>Don't have an account? Sign Up</label>
+            <label @onclick="redirectToSignup">Don't have an account? Sign Up</label>
         </div>
+    </div>
+
+    <div class="loginErrorBackground" style="display: @(loginError ? "block" : "none");">
+        <h3>Incorrect login information.</h3>
+        <label class="subheading">@invalidMessage</label>
     </div>
 </ul>
 
-<body>
-
-    
-</body>
-
 @code {
 
+    //load in title after page is rendered
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", "document.title = 'ProjectPilot - Log In';");
+        }
+    }
+
+    private bool loginError = false;
+    private string invalidMessage { get; set; } = "";
+    private string username { get; set; } = "";
+    private string password { get; set; } = "";
+    private bool rememberUser { get; set; } = false;
+
+    private void redirectToPasswordReset()
+    {
+        NavManager.NavigateTo("/404");
+    }
+
+    private void redirectToSignup()
+    {
+        NavManager.NavigateTo("/signup");
+    }
+
+    private void redirectToHome()
+    {
+        NavManager.NavigateTo("/home");
+    }
+
+    private void checkFields()
+    {
+        if (AccountDAO.registryContainsUsername(username))
+        {
+            if (AccountDAO.registryContainsPassword(password))
+            {
+                redirectToHome();
+            }
+            else
+            {
+                loginError = true;
+                updateInvalidMessage("password");
+            }
+        }
+        else
+        {
+            loginError = true;
+            updateInvalidMessage("username");
+        }
+    }
+
+    private void updateInvalidMessage(string type)
+    {
+        invalidMessage = type switch
+        {
+            "username" => "The username you entered doesn't exist in our system.",
+            "password" => "Incorrect password.",
+            _ => "Something went wrong."
+        };
+    }
 }

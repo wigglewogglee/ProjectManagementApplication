@@ -1,0 +1,334 @@
+﻿
+
+.signupBackground {
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -108%);
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    width: 400px;
+    height: 530px;
+    background-color: white;
+    box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.13);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.loginWrapper label {
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    color: #8c8c8c;
+    text-decoration: underline;
+    margin-left: 105px;
+    position: absolute;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.signupHeader {
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 400px;
+    background-color: #45355b;
+}
+
+.wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+.wrapper .input-data {
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper .input-data input {
+    outline: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+    transform: translateY(-25px);
+}
+
+.passwordWrapper {
+    margin-top: -20px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+    .passwordWrapper .input-data {
+        height: 40px;
+        position: relative;
+        width: 100%;
+    }
+
+        .passwordWrapper .input-data input {
+            outline: none;
+            font-family: "Poppins";
+            font-size: 16px;
+            color: black;
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid silver;
+        }
+
+        .passwordWrapper .input-data label {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            color: grey;
+            pointer-events: none;
+            font-family: "Poppins";
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+.signupBackground h3 {
+    font-family: "Poppins-Bold" font-size: 25px;
+    margin-left: 150px;
+    padding-top: 30px;
+}
+
+.signupBackground h2 {
+    font-size: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#nonPad {
+    padding-top: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 30px;
+}
+
+body {
+    background-color: #f8f5f5;
+}
+
+.forgotWrapper {
+    margin-top: -34px;
+}
+
+    .forgotWrapper label {
+        font-size: 12px;
+        font-family: "Poppins-Bold";
+        text-decoration: underline;
+        color: #8c8c8c;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+.termsConditionsWrapper {
+    margin-top: 20px;
+}
+
+.termsConditionsWrapper label {
+    font-size: 16px;
+    font-family: "Poppins";
+    color: #8c8c8c;
+    margin-left: 98px;
+    margin-top: -95px;
+    position: absolute;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    box-shadow: none;
+    border-color: silver;
+    margin-top: -2px;
+    accent-color: #5e477e;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-left: 68px;
+    position: absolute;
+    animation: none;
+}
+
+.signupWrapper {
+    margin-top: -25px;
+}
+
+.signupButton {
+    color: white;
+    font-size: 16px;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 50px;
+    background-color: #5e477e;
+    transition: 0.25s all ease;
+    margin-top: -10px;
+    position: absolute;
+}
+
+.signupButton:hover {
+    background-color: #8d6cb9;
+}
+
+.signupWrapper label {
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    color: #8c8c8c;
+    text-decoration: underline;
+    margin-left: 105px;
+}
+
+.emailWrapper {
+    margin-top: -20px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+.emailWrapper .input-data {
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.emailWrapper .input-data input {
+    outline: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.emailWrapper .input-data label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.nameWrapper {
+    margin-top: -20px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+}
+
+.nameWrapper .input-data {
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.nameWrapper .input-data input {
+    outline: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.nameWrapper .input-data label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.header {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-30%, -500%);
+}
+
+.header label {
+    color: white;
+    font-family: "Poppins";
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+}
+
+.signupErrorBackground {
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    width: 400px;
+    height: 140px;
+    background-color: #FFCCCB;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+    .signupErrorBackground h3 {
+        color: #6e0701;
+        font-family: "Poppins-Bold";
+        font-size: 25px;
+        margin-left: 30px;
+        padding-top: 30px;
+    }
+
+.subheading {
+    color: #6e0701;
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-left: 30px;
+    position: absolute;
+}
+
+.errorMessage {
+    color: #6e0701;
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-left: 30px;
+    padding-top: 30px;
+}
