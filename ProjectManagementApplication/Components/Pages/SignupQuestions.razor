@@ -12,24 +12,57 @@
     </div>
 
     <div class="signupBackground">
-        <h3>Let's finish setting up your account.</h3>
+        <h3>Account Setup</h3>
         <div class="wrapper">
             <div class="input-data">
                 <input type="text" @bind="fullName" class="fullNameField" required>
                 <label>Full Name</label>
             </div>
         </div>
+        <div class="dateBirthWrapper">
+            <div class="static-input-data">
+                <label>Date of Birth</label>
+            </div>
+            <div class="fade-input-data">
+                <input type="text" @bind="dateBirth" class="dateBirthField" required>
+                <label>DD/MM/YYYY</label>
+            </div>
+        </div>
+        <!--<div class="genderWrapper">
+            <label>Gender</label>
 
+            <div class="radioDivs">
+                <button class="maleButton @(genderToggle == 0 ? "clicked" : "")" @onclick="(() => toggleGender(0))">Male</button>
+                <button class="femaleButton @(genderToggle == 1 ? "clicked" : "")" @onclick="(() => toggleGender(1))">Female</button>
+                <button class="otherButton @(genderToggle == 2 ? "clicked" : "")" @onclick="(() => toggleGender(2))">Other</button>
+
+            </div>
+        </div>-->
+        <div class="useWrapper">
+            <label>How will you use ProjectPilot?</label>
+
+            <button class="personalButton @(personalUse ? "clicked" : "")" @onclick="toggleUse">Personal Use</button>
+            <button class="businessButton @(!personalUse ? "clicked" : "")" @onclick="toggleUse">Business Use</button>
+        </div>
+        <div class="confirmWrapper">
+            <button class="confirmButton">Let's Get Started</button>
+        </div>
     </div>
 </ul>
 
 @code {
 
-    private bool loginError = false;
-    private string invalidMessage { get; set; } = "";
-    private string username { get; set; } = "";
     private string fullName { get; set; } = "";
-    private string email { get; set; } = "";
-    private string password { get; set; } = "";
-    private bool rememberUser { get; set; } = false;
+    private string dateBirth { get; set; } = "";
+    private bool personalUse = false;
+    private int genderToggle = 0;
+
+    private void toggleUse() {
+        personalUse = !personalUse;
+    }
+
+    private void toggleGender(int toggle) {
+
+        genderToggle = toggle;
+    }
 }

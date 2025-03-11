@@ -5,85 +5,59 @@
     padding-bottom: 30px;
 }
 
-.statusTitle {
-    position: absolute;
-    font-family: 'Poppins-Bold';
-    margin-left: 800px;
-    margin-top: -875px;
-    font-size: 30px;
+.projectTitleHeader {
+    margin-left: 6vh;
 }
 
-.statusBackground {
-    position: absolute;
-    height: 360px;
-    width: 920px;
-    background-image: url("Images/Project_Status.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.projectPanelGood {
-    height: 160px;
-    width: 720px;
-    background-image: url("Images/Good_Panel.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.headers {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    margin-bottom: 1%;
+    font-family: 'Poppins';
+    font-size: 20px;
+    width: fit-content;
 }
 
-.projectPanelWarning {
-    height: 160px;
-    width: 720px;
-    background-image: url("Images/Warning_Panel.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.assignerHeader {
+    margin-left: 10vh;
 }
 
-.projectPanelUrgent {
-    height: 160px;
-    width: 720px;
-    background-image: url("Images/Urgent_Panel.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.dateHeader {
+    margin-left: 10vh;
 }
 
-.unaffect {
-    position:absolute;
-    margin-left: 80px;
+.priorityHeader {
+    margin-left: 10vh;
 }
+
+.assignedHeader {
+    margin-left: 10vh;
+}
+
+.statusHeader {
+    margin-left: 10vh;
+}
+
+.progressHeader {
+    margin-left: 10vh;
+}
+
+.projectPanel {
+    border-radius: 40px;
+    height: 10vh;
+    margin-bottom: 1%;
+    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.13);
+}
+
 
 .projectName {
-    font-family: 'Poppins-Bold';
+    font-family: 'Poppins';
     font-size: 20px;
-    top: -25px;
-    left: 75px;
+    top: 20px;
+    left: 3.3%;
     position: relative;
     z-index: 1;
     margin: 0;
     padding: 0;
-}
-
-.ownerImage img {
-    position: absolute;
-    height: 40px;
-    width: auto;
-    top: -20px;
-    left: -60px;
-    position: relative;
-    overflow-x: hidden;
-    border-radius: 50%;
 }
 
 .progressTag img {
