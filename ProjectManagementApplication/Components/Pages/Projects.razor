@@ -24,10 +24,23 @@
             <div class="projectPanel">
                 <div>
                     <span class="projectName">@project.getProjectDisplayName()</span>
+                    <span class="projectAssigner">@project.getProjectDisplayName()</span>
+                    <span class="projectDate">MM/DD/YYYY</span>
+                    <span class="projectProgressIndicator"></span>
+                    <span class="projectProgress">High</span>
+                    <span class="projectGroup">Group Name</span>
+                    <span class="projectStatusIndicator"></span>
+                    <span class="projectStatus">Done</span>
+
+                    <div class="progressBarOverlay">
+                        <span class="progressBarNum">100%</span>
+                    </div>
                 </div>
             </div>
         }
-   </div>
+
+        <button class="createButton">Create Project</button>
+    </div>
 </ul>
 
 @code {

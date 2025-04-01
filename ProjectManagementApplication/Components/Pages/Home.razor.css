@@ -1,0 +1,21 @@
+﻿.title {
+    font-family: 'Poppins-Bold';
+    margin-top: 2vh;
+    font-size: 3.5vh;
+    padding-bottom: 3vh;
+}
+
+.calendar {
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    width: 100vh;
+    border-radius: 5vh;
+    height: 30vh;
+}
+
+.calendarTitle {
+    color: black;
+    font-family: 'Poppins-Bold';
+    font-size: 3.5vh;
+    margin-left: 5vh;
+    margin-top: 2vh;
+}

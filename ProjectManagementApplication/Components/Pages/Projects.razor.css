@@ -1,12 +1,13 @@
 ﻿.title {
     font-family: 'Poppins-Bold';
-    left: 40px;
-    font-size: 30px;
-    padding-bottom: 30px;
+    margin-top: 2vh;
+    font-size: 3.5vh;
+    padding-bottom: 3vh;
 }
 
 .projectTitleHeader {
-    margin-left: 6vh;
+    margin-left: 3vh;
+    white-space: nowrap;
 }
 
 .headers {
@@ -18,19 +19,21 @@
 }
 
 .assignerHeader {
-    margin-left: 10vh;
+    margin-left: 15vh;
 }
 
 .dateHeader {
-    margin-left: 10vh;
+    margin-left: 20vh;
+    white-space: nowrap;
 }
 
 .priorityHeader {
-    margin-left: 10vh;
+    margin-left: 16vh;
 }
 
 .assignedHeader {
-    margin-left: 10vh;
+    margin-left: 14vh;
+    white-space: nowrap;
 }
 
 .statusHeader {
@@ -38,22 +41,145 @@
 }
 
 .progressHeader {
-    margin-left: 10vh;
+    margin-left: 12vh;
 }
 
 .projectPanel {
-    border-radius: 40px;
-    height: 10vh;
+
+    border-radius: 5vh;
+    height: 7vh;
     margin-bottom: 1%;
-    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.13);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    width: 195vh;
 }
 
+.createButton {
+    border-radius: 5vh;
+    height: 7vh;
+    margin-bottom: 1%;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    background: #5e477e;
+    width: 23vh;
+    color: white;
+    font-size: 20px;
+    font-family: "Poppins-Bold";
+    border: none;
+    transition: 0.25s all ease;
+}
+
+.createButton:hover {
+    background: #8d6cb9;
+}
 
 .projectName {
     font-family: 'Poppins';
     font-size: 20px;
-    top: 20px;
-    left: 3.3%;
+    top: 2vh;
+    left: 3vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.projectAssigner {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 16.3vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.projectGroup {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 55vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.projectDate {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 29.3vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.projectProgressIndicator {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 41.3vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    height: 1.5vh;
+    width: 1.5vh;
+    background-color: #df5959;
+    border-radius: 5vh;
+    display: inline-block;
+}
+
+.projectStatusIndicator {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 68vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    height: 1.5vh;
+    width: 1.5vh;
+    background-color: #78d105;
+    border-radius: 5vh;
+    display: inline-block;
+}
+
+.projectStatus {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 69vh;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.progressBarOverlay {
+    background-color: #8f79b9;
+    font-family: 'Poppins-Bold';
+    color: white;
+    font-size: 20px;
+    width: 33vh;
+    border-radius: 5vh;
+    margin-bottom: 2vh;
+    margin-left: 155vh;
+    margin-top: -1.3vh; 
+}
+
+
+.progressBarNum {
+    margin-left: 1vh;
+}
+
+.projectProgress {
+    font-family: 'Poppins';
+    font-size: 20px;
+    top: 2vh;
+    left: 42vh;
     position: relative;
     z-index: 1;
     margin: 0;
@@ -92,24 +218,15 @@
     overflow-x: hidden;
 }
 
-.projectDate {
-    font-family: 'Poppins';
-    font-size: 14px;
-    top: -70px;
-    left: -265px;
-    position: relative;
-    z-index: 1;
-}
-
 .addProgressButton img:hover {
     opacity: 70%;
 }
 .container {
     display: flex;
     flex-direction: column;
-    left: 400px;
     margin: 0;
     padding: 0;
+
 }
 
 .progress {
